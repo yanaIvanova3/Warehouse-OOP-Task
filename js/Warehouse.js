@@ -9,21 +9,12 @@ var Warehouse = (function(parent) {
     Warehouse.prototype = Object.create(parent.prototype);
     Warehouse.prototype.constructor = Warehouse;
 
-    Warehouse.prototype.checkQuantity = function (product) {
-        var index = this.getProducts().indexOf(product);
-        var wantedProduct = this.getProducts()[index].getCount();
-        return wantedProduct;
-    }
 
-    Warehouse.prototype.productDelivery = function (product, provider) {
+    Warehouse.prototype.deliver = function (facility, product, quantity) {
         if (this.checkQuantity(product) < 5) {
-            provider.deliver(Warehouse, product);
+            parent.call(this, facility, product, quantity);
         }
     }
-
-    //Warehouse.prototype.deliver = function (facility, product, quantity) {
-    //    if ()
-    //}
 
     return Warehouse;
 })(Facility);

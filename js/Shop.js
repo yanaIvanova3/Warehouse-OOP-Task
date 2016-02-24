@@ -6,8 +6,14 @@ var Shop = (function(parent) {
         parent.call(this, name)
     }
 
-    Provider.prototype = Object.create(parent.prototype);
-    Provider.prototype.constructor = Shop;
+    Shop.prototype = Object.create(parent.prototype);
+    Shop.prototype.constructor = Shop;
+
+    Shop.prototype.deliver = function (facility, product, quantity) {
+        if (this.checkQuantity(product) < 5) {
+            parent.call(this, facility, product, quantity);
+        }
+    }
 
     return Shop;
 })(Facility);

@@ -14,6 +14,12 @@ function Facility (name) {
         products.push(product);
     }
 
+    Facility.prototype.checkQuantity = function (product) {
+        var index = this.getProducts().indexOf(product);
+        var wantedProduct = this.getProducts()[index].getCount();
+        return wantedProduct;
+    }
+
     Facility.prototype.deliver = function (facility, product, quantity) {
         var wantedIndex = facility.getProducts().indexOf(product);
         var wantedProduct = facility.getProducts()[wantedIndex];
