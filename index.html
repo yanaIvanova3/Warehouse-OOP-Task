@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" src="js/Products.js"></script>
+<script type="text/javascript" src="js/Facility.js"></script>
+<script type="text/javascript" src="js/Warehouse.js"></script>
+<script type="text/javascript" src="js/Provider.js"></script>
+<script type="text/javascript">
+
+    var banana = new Products ('bananas', 'fruit', 15);
+    var warehouse = new Warehouse ('store');
+    var provider1 = new Provider('provide');
+    warehouse.setProduct(banana);
+
+    provider1.deliver(warehouse, banana, 25);
+
+    console.log(warehouse.checkQuantity(banana));
+
+
+
+</script>
+</html>
