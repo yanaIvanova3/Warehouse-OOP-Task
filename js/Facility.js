@@ -6,13 +6,14 @@ function Facility (name) {
 
     var products = [];
 
-    this.getProducts = function() {
+    this.getProducts = function () {
         return products;
     }
 
     this.setProduct = function (product) {
         products.push(product);
     }
+}
 
     Facility.prototype.checkQuantity = function (product) {
         var index = this.getProducts().indexOf(product);
@@ -26,4 +27,3 @@ function Facility (name) {
         wantedProduct.setCount(quantity);
     }
 
-}

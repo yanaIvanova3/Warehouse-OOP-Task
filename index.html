@@ -15,28 +15,50 @@
 <script type="text/javascript" src="js/Client.js"></script>
 <script type="text/javascript">
 
-    var banana = new Products ('bananas', 'fruit', 15);
-    var apple = new Products ('apples', 'fruit', 15);
-    var orange = new Products ('oranges', 'fruit', 15);
-    var potato = new Products ('potato', 'fruit', 15);
-    var cucumber = new Products ('cucumber', 'fruit', 15);
-
+//    var banana = new Products ('bananas', 'fruit', 15);
+//    var apple = new Products ('apples', 'fruit', 15);
+//    var orange = new Products ('oranges', 'fruit', 15);
+//    var potato = new Products ('potato', 'fruit', 15);
+//    var cucumber = new Products ('cucumber', 'fruit', 15);
+//
     var client = new Client();
     var newShop = new Shop ('bla');
-
+//
     var warehouse = new Warehouse ('store');
     var provider1 = new Provider('provide');
 
-    warehouse.setProduct(banana);
-    warehouse.setProduct(apple);
-    warehouse.setProduct(orange);
-    warehouse.setProduct(potato);
-    warehouse.setProduct(cucumber);
 
-    provider1.deliver(warehouse, banana, 25);
+var banana1 = new Products ('bananas', 'fruit', 14);
+var apple1 = new Products ('apples', 'fruit', 15);
+var orange1 = new Products ('oranges', 'fruit', 15);
+var potato1 = new Products ('potato', 'fruit', 15);
+var cucumber1 = new Products ('cucumber', 'fruit', 15);
 
+warehouse.setProduct(banana1);
+warehouse.setProduct(apple1);
+warehouse.setProduct(orange1);
+warehouse.setProduct(potato1);
+warehouse.setProduct(cucumber1);
 
-    client.buy(warehouse);
+//
+//    provider1.deliver(warehouse, banana, 25);
+//
+//
+//    client.buy(warehouse);
+
+var banana = new Products ('bananas', 'fruit', 4);
+var apple = new Products ('apples', 'fruit', 4);
+var orange = new Products ('oranges', 'fruit', 4);
+var potato = new Products ('potato', 'fruit', 4);
+var cucumber = new Products ('cucumber', 'fruit', 3);
+
+newShop.setProduct(banana);
+newShop.setProduct(apple);
+newShop.setProduct(orange);
+newShop.setProduct(potato);
+newShop.setProduct(cucumber);
+
+    client.buy(warehouse, newShop)
 
 
 
